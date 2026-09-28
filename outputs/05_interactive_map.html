@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3f21be170726a508f8f264b7ce11aeaa {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3f21be170726a508f8f264b7ce11aeaa" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3f21be170726a508f8f264b7ce11aeaa = L.map(
+                "map_3f21be170726a508f8f264b7ce11aeaa",
+                {
+                    center: [11.125088087717693, 75.9742042541504],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 9,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+
+            
+
+        
+    
+            var tile_layer_6183d9d80a45ddba98e2b3cf4c64bdb4 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_6183d9d80a45ddba98e2b3cf4c64bdb4.addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var marker_b10938b0647eeb8a0fde1e0b91fd69c5 = L.marker(
+                [11.038501739501953, 75.89522552490234],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_40dbbb6cb44cf8880c347be1d88304fc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9063ef2a8a96a2e3f9e91799c7552ad3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_ee6a28fa784df0ac04370affefb6ec8f = $(`<div id="html_ee6a28fa784df0ac04370affefb6ec8f" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #590</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.2805 km²<br>             <b>Mean Intensity Change:</b> 4.04 dB<br>             <b>Peak Intensity Spike:</b> +8.57 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.0385°N, 75.8952°E         </div>         </div>`)[0];
+                popup_9063ef2a8a96a2e3f9e91799c7552ad3.setContent(html_ee6a28fa784df0ac04370affefb6ec8f);
+            
+        
+
+        marker_b10938b0647eeb8a0fde1e0b91fd69c5.bindPopup(popup_9063ef2a8a96a2e3f9e91799c7552ad3)
+        ;
+
+        
+    
+    
+                marker_b10938b0647eeb8a0fde1e0b91fd69c5.setIcon(icon_40dbbb6cb44cf8880c347be1d88304fc);
+            
+    
+            var marker_483de3430724697604d159dff821ae8c = L.marker(
+                [10.765379905700684, 75.98651123046875],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_0fe00765d7527667231cafedc6b95268 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eb8102f8d7f34ef9221764f3658af13c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_baf5d01265ed60c3560b5d6430310b96 = $(`<div id="html_baf5d01265ed60c3560b5d6430310b96" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #627</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 1.0819 km²<br>             <b>Mean Intensity Change:</b> 4.14 dB<br>             <b>Peak Intensity Spike:</b> +7.22 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 10.7654°N, 75.9865°E         </div>         </div>`)[0];
+                popup_eb8102f8d7f34ef9221764f3658af13c.setContent(html_baf5d01265ed60c3560b5d6430310b96);
+            
+        
+
+        marker_483de3430724697604d159dff821ae8c.bindPopup(popup_eb8102f8d7f34ef9221764f3658af13c)
+        ;
+
+        
+    
+    
+                marker_483de3430724697604d159dff821ae8c.setIcon(icon_0fe00765d7527667231cafedc6b95268);
+            
+    
+            var marker_b19d5e78c7741ca54792beb0b1fdf48e = L.marker(
+                [10.698334693908691, 75.99481201171875],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_d1390f7e19005b43d95af2b5b56fd84a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_66484043ed83413d0de386ab17657fb4 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_020b85789977aac2aa8f0fa424f23964 = $(`<div id="html_020b85789977aac2aa8f0fa424f23964" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #641</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.6812 km²<br>             <b>Mean Intensity Change:</b> 4.64 dB<br>             <b>Peak Intensity Spike:</b> +6.83 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 10.6983°N, 75.9948°E         </div>         </div>`)[0];
+                popup_66484043ed83413d0de386ab17657fb4.setContent(html_020b85789977aac2aa8f0fa424f23964);
+            
+        
+
+        marker_b19d5e78c7741ca54792beb0b1fdf48e.bindPopup(popup_66484043ed83413d0de386ab17657fb4)
+        ;
+
+        
+    
+    
+                marker_b19d5e78c7741ca54792beb0b1fdf48e.setIcon(icon_d1390f7e19005b43d95af2b5b56fd84a);
+            
+    
+            var marker_c9c31a30cf643e48ff0dd2499369867c = L.marker(
+                [10.578646659851074, 76.09854888916016],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_c991afa97244a55e5b812a3bcd69a934 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8a1cb088fae0a338345b850476f9d018 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d50756b73d72ebedd389e923b188cb0c = $(`<div id="html_d50756b73d72ebedd389e923b188cb0c" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #661</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.2004 km²<br>             <b>Mean Intensity Change:</b> 4.73 dB<br>             <b>Peak Intensity Spike:</b> +6.57 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 10.5786°N, 76.0985°E         </div>         </div>`)[0];
+                popup_8a1cb088fae0a338345b850476f9d018.setContent(html_d50756b73d72ebedd389e923b188cb0c);
+            
+        
+
+        marker_c9c31a30cf643e48ff0dd2499369867c.bindPopup(popup_8a1cb088fae0a338345b850476f9d018)
+        ;
+
+        
+    
+    
+                marker_c9c31a30cf643e48ff0dd2499369867c.setIcon(icon_c991afa97244a55e5b812a3bcd69a934);
+            
+    
+            var marker_f1dd363a469caddd126f95fdcbc8969d = L.marker(
+                [10.551523208618164, 76.10684967041016],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_5efce804209b68a567da327ebdc7fa0f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f2c508fb02872bd37d52483a6eb3968e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4a0d6c692fae8003a5843d6d3ec96485 = $(`<div id="html_4a0d6c692fae8003a5843d6d3ec96485" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #667</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.3606 km²<br>             <b>Mean Intensity Change:</b> 4.11 dB<br>             <b>Peak Intensity Spike:</b> +6.39 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 10.5515°N, 76.1068°E         </div>         </div>`)[0];
+                popup_f2c508fb02872bd37d52483a6eb3968e.setContent(html_4a0d6c692fae8003a5843d6d3ec96485);
+            
+        
+
+        marker_f1dd363a469caddd126f95fdcbc8969d.bindPopup(popup_f2c508fb02872bd37d52483a6eb3968e)
+        ;
+
+        
+    
+    
+                marker_f1dd363a469caddd126f95fdcbc8969d.setIcon(icon_5efce804209b68a567da327ebdc7fa0f);
+            
+    
+            var marker_6d504c41877bea90f408ac5f9ee8b08d = L.marker(
+                [10.573859214782715, 76.10684967041016],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_20bb70c0fc5de020704cf7260b8b93ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c106f92244f26096777d84d2c22360a9 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7fdf5aed66b021cd1d0326f7cf617023 = $(`<div id="html_7fdf5aed66b021cd1d0326f7cf617023" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #663</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.5610 km²<br>             <b>Mean Intensity Change:</b> 3.75 dB<br>             <b>Peak Intensity Spike:</b> +6.27 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 10.5739°N, 76.1068°E         </div>         </div>`)[0];
+                popup_c106f92244f26096777d84d2c22360a9.setContent(html_7fdf5aed66b021cd1d0326f7cf617023);
+            
+        
+
+        marker_6d504c41877bea90f408ac5f9ee8b08d.bindPopup(popup_c106f92244f26096777d84d2c22360a9)
+        ;
+
+        
+    
+    
+                marker_6d504c41877bea90f408ac5f9ee8b08d.setIcon(icon_20bb70c0fc5de020704cf7260b8b93ed);
+            
+    
+            var marker_e85f0165bf81b9fe8a3b0a4a464f4cb4 = L.marker(
+                [10.78134536743164, 75.97199249267578],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_5146344bc348d2929e31fd3a0874e4ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3d26f00027f6d0b2427d4569df1a588f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_04d41a0b2067218534c696cd31824587 = $(`<div id="html_04d41a0b2067218534c696cd31824587" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #623</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 1.0419 km²<br>             <b>Mean Intensity Change:</b> 3.72 dB<br>             <b>Peak Intensity Spike:</b> +5.34 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 10.7813°N, 75.9720°E         </div>         </div>`)[0];
+                popup_3d26f00027f6d0b2427d4569df1a588f.setContent(html_04d41a0b2067218534c696cd31824587);
+            
+        
+
+        marker_e85f0165bf81b9fe8a3b0a4a464f4cb4.bindPopup(popup_3d26f00027f6d0b2427d4569df1a588f)
+        ;
+
+        
+    
+    
+                marker_e85f0165bf81b9fe8a3b0a4a464f4cb4.setIcon(icon_5146344bc348d2929e31fd3a0874e4ba);
+            
+    
+            var marker_e82dcbe88528c266fda48780baf0aac7 = L.marker(
+                [10.735048294067383, 75.98443603515625],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_b40ec75bbe6b0bb59d6d7ec71a75928b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0175a8a0ab74c8a63b5c187897217cee = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4dc223ba23c1fe6cc9339bcfcb477931 = $(`<div id="html_4dc223ba23c1fe6cc9339bcfcb477931" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #636</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.4007 km²<br>             <b>Mean Intensity Change:</b> 3.98 dB<br>             <b>Peak Intensity Spike:</b> +5.15 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 10.7350°N, 75.9844°E         </div>         </div>`)[0];
+                popup_0175a8a0ab74c8a63b5c187897217cee.setContent(html_4dc223ba23c1fe6cc9339bcfcb477931);
+            
+        
+
+        marker_e82dcbe88528c266fda48780baf0aac7.bindPopup(popup_0175a8a0ab74c8a63b5c187897217cee)
+        ;
+
+        
+    
+    
+                marker_e82dcbe88528c266fda48780baf0aac7.setIcon(icon_b40ec75bbe6b0bb59d6d7ec71a75928b);
+            
+    
+            var marker_c8a166ffa506c95d28e1c436e0d087c1 = L.marker(
+                [11.10082721710205, 75.87448120117188],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_632bde523d2a29203b8130892f7370fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5cbc2029cb0fa847be30d4245d1b7c78 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3240120acf5a35b0c198b64a550f1c18 = $(`<div id="html_3240120acf5a35b0c198b64a550f1c18" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #558</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.4809 km²<br>             <b>Mean Intensity Change:</b> 3.15 dB<br>             <b>Peak Intensity Spike:</b> +4.93 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.1008°N, 75.8745°E         </div>         </div>`)[0];
+                popup_5cbc2029cb0fa847be30d4245d1b7c78.setContent(html_3240120acf5a35b0c198b64a550f1c18);
+            
+        
+
+        marker_c8a166ffa506c95d28e1c436e0d087c1.bindPopup(popup_5cbc2029cb0fa847be30d4245d1b7c78)
+        ;
+
+        
+    
+    
+                marker_c8a166ffa506c95d28e1c436e0d087c1.setIcon(icon_632bde523d2a29203b8130892f7370fe);
+            
+    
+            var marker_2c08b9a78bf7711e896a80764831d2fb = L.marker(
+                [10.719084739685059, 76.05912780761719],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_85fb74a3403d6d02af9517f6cef289ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb67208522e7de2f10653cca3d9459d5 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e75fa95108e96b315da642b29a8bbbbd = $(`<div id="html_e75fa95108e96b315da642b29a8bbbbd" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #638</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 1.0419 km²<br>             <b>Mean Intensity Change:</b> 3.46 dB<br>             <b>Peak Intensity Spike:</b> +4.78 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 10.7191°N, 76.0591°E         </div>         </div>`)[0];
+                popup_bb67208522e7de2f10653cca3d9459d5.setContent(html_e75fa95108e96b315da642b29a8bbbbd);
+            
+        
+
+        marker_2c08b9a78bf7711e896a80764831d2fb.bindPopup(popup_bb67208522e7de2f10653cca3d9459d5)
+        ;
+
+        
+    
+    
+                marker_2c08b9a78bf7711e896a80764831d2fb.setIcon(icon_85fb74a3403d6d02af9517f6cef289ba);
+            
+    
+            var marker_3f76fc2eebde3d6c103994768301176a = L.marker(
+                [10.79411792755127, 75.97406768798828],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_6180388f887d3ae5884fb6f0e4a65bd6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5da771ba6b6e4d6e4bf2c2c38703f3c7 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_272748480e7fbd7cf140de54da12b9dd = $(`<div id="html_272748480e7fbd7cf140de54da12b9dd" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #620</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.5209 km²<br>             <b>Mean Intensity Change:</b> 3.05 dB<br>             <b>Peak Intensity Spike:</b> +4.61 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 10.7941°N, 75.9741°E         </div>         </div>`)[0];
+                popup_5da771ba6b6e4d6e4bf2c2c38703f3c7.setContent(html_272748480e7fbd7cf140de54da12b9dd);
+            
+        
+
+        marker_3f76fc2eebde3d6c103994768301176a.bindPopup(popup_5da771ba6b6e4d6e4bf2c2c38703f3c7)
+        ;
+
+        
+    
+    
+                marker_3f76fc2eebde3d6c103994768301176a.setIcon(icon_6180388f887d3ae5884fb6f0e4a65bd6);
+            
+    
+            var marker_6dce6aa815fb0d329ad60e4b1d226066 = L.marker(
+                [10.56109619140625, 76.10062408447266],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_3fbb0d2779bbc47279f884415131df7c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_40e355cfae365cfd5b5e484cc5ccc368 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_3e34c586be4e409cad9e9d212126de90 = $(`<div id="html_3e34c586be4e409cad9e9d212126de90" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #666</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.5610 km²<br>             <b>Mean Intensity Change:</b> 3.30 dB<br>             <b>Peak Intensity Spike:</b> +4.48 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 10.5611°N, 76.1006°E         </div>         </div>`)[0];
+                popup_40e355cfae365cfd5b5e484cc5ccc368.setContent(html_3e34c586be4e409cad9e9d212126de90);
+            
+        
+
+        marker_6dce6aa815fb0d329ad60e4b1d226066.bindPopup(popup_40e355cfae365cfd5b5e484cc5ccc368)
+        ;
+
+        
+    
+    
+                marker_6dce6aa815fb0d329ad60e4b1d226066.setIcon(icon_3fbb0d2779bbc47279f884415131df7c);
+            
+    
+            var marker_d873a0a86e5404a8e2ac471593dd2be3 = L.marker(
+                [11.008143424987793, 75.89937591552734],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_ef21128d5be16d3e7e78717c9d570407 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9ff739d54befe5d6be40c09e5c6dfd6f = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_62cbb231df52d9c6ce83903124db8ad6 = $(`<div id="html_62cbb231df52d9c6ce83903124db8ad6" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #603</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.2404 km²<br>             <b>Mean Intensity Change:</b> 3.34 dB<br>             <b>Peak Intensity Spike:</b> +4.39 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.0081°N, 75.8994°E         </div>         </div>`)[0];
+                popup_9ff739d54befe5d6be40c09e5c6dfd6f.setContent(html_62cbb231df52d9c6ce83903124db8ad6);
+            
+        
+
+        marker_d873a0a86e5404a8e2ac471593dd2be3.bindPopup(popup_9ff739d54befe5d6be40c09e5c6dfd6f)
+        ;
+
+        
+    
+    
+                marker_d873a0a86e5404a8e2ac471593dd2be3.setIcon(icon_ef21128d5be16d3e7e78717c9d570407);
+            
+    
+            var marker_4d40e11bb820252fb086ae394206a748 = L.marker(
+                [11.067266464233398, 75.91390228271484],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_8ef08754817dd742618f554cc87a8c07 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_79e8bc563280b99e6ab8ec077cac7848 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_9d8eb44fbab4f9da27785db3c7740fab = $(`<div id="html_9d8eb44fbab4f9da27785db3c7740fab" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #579</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.3206 km²<br>             <b>Mean Intensity Change:</b> 3.45 dB<br>             <b>Peak Intensity Spike:</b> +4.35 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.0673°N, 75.9139°E         </div>         </div>`)[0];
+                popup_79e8bc563280b99e6ab8ec077cac7848.setContent(html_9d8eb44fbab4f9da27785db3c7740fab);
+            
+        
+
+        marker_4d40e11bb820252fb086ae394206a748.bindPopup(popup_79e8bc563280b99e6ab8ec077cac7848)
+        ;
+
+        
+    
+    
+                marker_4d40e11bb820252fb086ae394206a748.setIcon(icon_8ef08754817dd742618f554cc87a8c07);
+            
+    
+            var marker_249c082c5bd5f2399e58f5cf2aad5453 = L.marker(
+                [10.741433143615723, 75.97821807861328],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_0d11e2b1377de32284102dae018fb51f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_98b8b33049f10b913e716152e328e838 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a65c0031030db0fd8d4f99f1da28f375 = $(`<div id="html_a65c0031030db0fd8d4f99f1da28f375" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #633</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.2404 km²<br>             <b>Mean Intensity Change:</b> 3.05 dB<br>             <b>Peak Intensity Spike:</b> +4.09 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 10.7414°N, 75.9782°E         </div>         </div>`)[0];
+                popup_98b8b33049f10b913e716152e328e838.setContent(html_a65c0031030db0fd8d4f99f1da28f375);
+            
+        
+
+        marker_249c082c5bd5f2399e58f5cf2aad5453.bindPopup(popup_98b8b33049f10b913e716152e328e838)
+        ;
+
+        
+    
+    
+                marker_249c082c5bd5f2399e58f5cf2aad5453.setIcon(icon_0d11e2b1377de32284102dae018fb51f);
+            
+    
+            var marker_b10f86883088d78b71f3d6ac1aee60a4 = L.marker(
+                [11.11681079864502, 75.86410522460938],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_1ddf00e77fab6ff3711920c0a298b47b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e1a507666543c6bc1fc54a79f645e11e = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_7e080035cf130d0be2f0b6641e7b23b6 = $(`<div id="html_7e080035cf130d0be2f0b6641e7b23b6" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #547</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.2004 km²<br>             <b>Mean Intensity Change:</b> 2.93 dB<br>             <b>Peak Intensity Spike:</b> +3.71 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.1168°N, 75.8641°E         </div>         </div>`)[0];
+                popup_e1a507666543c6bc1fc54a79f645e11e.setContent(html_7e080035cf130d0be2f0b6641e7b23b6);
+            
+        
+
+        marker_b10f86883088d78b71f3d6ac1aee60a4.bindPopup(popup_e1a507666543c6bc1fc54a79f645e11e)
+        ;
+
+        
+    
+    
+                marker_b10f86883088d78b71f3d6ac1aee60a4.setIcon(icon_1ddf00e77fab6ff3711920c0a298b47b);
+            
+    
+            var marker_dc41934f7602a7a2975d57a02fc43804 = L.marker(
+                [10.741433143615723, 75.99066162109375],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_8614d97fc7f1fea7c1e564b36c5ef7bb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_26433cd268fc84e392c37e640e5639bc = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_6f7392b6e522d9772ef992f38a569a77 = $(`<div id="html_6f7392b6e522d9772ef992f38a569a77" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #632</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.2805 km²<br>             <b>Mean Intensity Change:</b> 2.97 dB<br>             <b>Peak Intensity Spike:</b> +3.57 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 10.7414°N, 75.9907°E         </div>         </div>`)[0];
+                popup_26433cd268fc84e392c37e640e5639bc.setContent(html_6f7392b6e522d9772ef992f38a569a77);
+            
+        
+
+        marker_dc41934f7602a7a2975d57a02fc43804.bindPopup(popup_26433cd268fc84e392c37e640e5639bc)
+        ;
+
+        
+    
+    
+                marker_dc41934f7602a7a2975d57a02fc43804.setIcon(icon_8614d97fc7f1fea7c1e564b36c5ef7bb);
+            
+    
+            var marker_3d1b92b632af52fd76e4863caf8d0334 = L.marker(
+                [11.52626895904541, 75.99688720703125],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_b04140362f18ee2180688493af32876c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7e6a88b8be0e84608743a5b363deea93 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_63e21a0997a340fbfe1fe3f1d7d085e5 = $(`<div id="html_63e21a0997a340fbfe1fe3f1d7d085e5" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #233</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.2004 km²<br>             <b>Mean Intensity Change:</b> 2.75 dB<br>             <b>Peak Intensity Spike:</b> +3.49 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.5263°N, 75.9969°E         </div>         </div>`)[0];
+                popup_7e6a88b8be0e84608743a5b363deea93.setContent(html_63e21a0997a340fbfe1fe3f1d7d085e5);
+            
+        
+
+        marker_3d1b92b632af52fd76e4863caf8d0334.bindPopup(popup_7e6a88b8be0e84608743a5b363deea93)
+        ;
+
+        
+    
+    
+                marker_3d1b92b632af52fd76e4863caf8d0334.setIcon(icon_b04140362f18ee2180688493af32876c);
+            
+    
+            var marker_2a15d6e0acca257efc2c3533c3ddf560 = L.marker(
+                [11.582294464111328, 75.97821807861328],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_bbf5cf8585de22ea8c04e2afd662e1af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a314c6ebaceaf0ab6b9b3be817da9e99 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_c2e95250906e706d1b962fa6799300d6 = $(`<div id="html_c2e95250906e706d1b962fa6799300d6" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #183</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 1.3624 km²<br>             <b>Mean Intensity Change:</b> 2.64 dB<br>             <b>Peak Intensity Spike:</b> +3.43 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.5823°N, 75.9782°E         </div>         </div>`)[0];
+                popup_a314c6ebaceaf0ab6b9b3be817da9e99.setContent(html_c2e95250906e706d1b962fa6799300d6);
+            
+        
+
+        marker_2a15d6e0acca257efc2c3533c3ddf560.bindPopup(popup_a314c6ebaceaf0ab6b9b3be817da9e99)
+        ;
+
+        
+    
+    
+                marker_2a15d6e0acca257efc2c3533c3ddf560.setIcon(icon_bbf5cf8585de22ea8c04e2afd662e1af);
+            
+    
+            var marker_bcc2218b077fdf8f89ba675cca144ac4 = L.marker(
+                [11.662349700927734, 75.92219543457031],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_fb825f441feb83eed4b00a35a3f154b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_90fffd75bd825659c69e7b0c6720b9e3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_22489f546b6bf94b4c83635f02548e4a = $(`<div id="html_22489f546b6bf94b4c83635f02548e4a" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #98</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.2404 km²<br>             <b>Mean Intensity Change:</b> 2.77 dB<br>             <b>Peak Intensity Spike:</b> +3.40 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.6623°N, 75.9222°E         </div>         </div>`)[0];
+                popup_90fffd75bd825659c69e7b0c6720b9e3.setContent(html_22489f546b6bf94b4c83635f02548e4a);
+            
+        
+
+        marker_bcc2218b077fdf8f89ba675cca144ac4.bindPopup(popup_90fffd75bd825659c69e7b0c6720b9e3)
+        ;
+
+        
+    
+    
+                marker_bcc2218b077fdf8f89ba675cca144ac4.setIcon(icon_fb825f441feb83eed4b00a35a3f154b3);
+            
+    
+            var marker_1fb496297812e5e7dd518590133c38d0 = L.marker(
+                [11.740825653076172, 75.92219543457031],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_cc6cfcad9c1deb42983e8e491f3f93e2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4229e7418e6c1b2412bf80b2928a8858 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_8139a245032a6743de5288d1102be75c = $(`<div id="html_8139a245032a6743de5288d1102be75c" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #29</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.2004 km²<br>             <b>Mean Intensity Change:</b> 2.81 dB<br>             <b>Peak Intensity Spike:</b> +3.32 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.7408°N, 75.9222°E         </div>         </div>`)[0];
+                popup_4229e7418e6c1b2412bf80b2928a8858.setContent(html_8139a245032a6743de5288d1102be75c);
+            
+        
+
+        marker_1fb496297812e5e7dd518590133c38d0.bindPopup(popup_4229e7418e6c1b2412bf80b2928a8858)
+        ;
+
+        
+    
+    
+                marker_1fb496297812e5e7dd518590133c38d0.setIcon(icon_cc6cfcad9c1deb42983e8e491f3f93e2);
+            
+    
+            var marker_77c3a080abf2b40b0866fce2d5f58167 = L.marker(
+                [11.441451072692871, 75.94087219238281],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_178e917c64414a913c0352be3942c29b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ff7254eed3ab01d8cb48643544513dd = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_a4b5ff63b912a9fd5fe7764d41849788 = $(`<div id="html_a4b5ff63b912a9fd5fe7764d41849788" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #328</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.3206 km²<br>             <b>Mean Intensity Change:</b> 2.67 dB<br>             <b>Peak Intensity Spike:</b> +3.26 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.4415°N, 75.9409°E         </div>         </div>`)[0];
+                popup_0ff7254eed3ab01d8cb48643544513dd.setContent(html_a4b5ff63b912a9fd5fe7764d41849788);
+            
+        
+
+        marker_77c3a080abf2b40b0866fce2d5f58167.bindPopup(popup_0ff7254eed3ab01d8cb48643544513dd)
+        ;
+
+        
+    
+    
+                marker_77c3a080abf2b40b0866fce2d5f58167.setIcon(icon_178e917c64414a913c0352be3942c29b);
+            
+    
+            var marker_66a11ea345bae0bce2228c96c680a5e0 = L.marker(
+                [11.643134117126465, 76.00103759765625],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_7c60d3b852b818da54f2eb9fca0dc862 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ccf0f2ec4a037fc47c157099cf301d48 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_afd56a4814f448c76383d543d59e8c9e = $(`<div id="html_afd56a4814f448c76383d543d59e8c9e" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #130</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.5610 km²<br>             <b>Mean Intensity Change:</b> 2.69 dB<br>             <b>Peak Intensity Spike:</b> +3.25 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.6431°N, 76.0010°E         </div>         </div>`)[0];
+                popup_ccf0f2ec4a037fc47c157099cf301d48.setContent(html_afd56a4814f448c76383d543d59e8c9e);
+            
+        
+
+        marker_66a11ea345bae0bce2228c96c680a5e0.bindPopup(popup_ccf0f2ec4a037fc47c157099cf301d48)
+        ;
+
+        
+    
+    
+                marker_66a11ea345bae0bce2228c96c680a5e0.setIcon(icon_7c60d3b852b818da54f2eb9fca0dc862);
+            
+    
+            var marker_c68779ad7b0ecf82835e6c96cf45cbc9 = L.marker(
+                [11.142385482788086, 75.85995483398438],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_c1c964999e3c9066353c52775acbc24b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_17ab315f338e383e503966d75634a92d = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_4ee553f5364d50245348303852a4a06c = $(`<div id="html_4ee553f5364d50245348303852a4a06c" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #536</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.5610 km²<br>             <b>Mean Intensity Change:</b> 2.59 dB<br>             <b>Peak Intensity Spike:</b> +3.19 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.1424°N, 75.8600°E         </div>         </div>`)[0];
+                popup_17ab315f338e383e503966d75634a92d.setContent(html_4ee553f5364d50245348303852a4a06c);
+            
+        
+
+        marker_c68779ad7b0ecf82835e6c96cf45cbc9.bindPopup(popup_17ab315f338e383e503966d75634a92d)
+        ;
+
+        
+    
+    
+                marker_c68779ad7b0ecf82835e6c96cf45cbc9.setIcon(icon_c1c964999e3c9066353c52775acbc24b);
+            
+    
+            var marker_5838a9cd85121bf6477d6cd54a4e4466 = L.marker(
+                [11.604707717895508, 75.97614288330078],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_b7622da54f72747abd778410cfd87855 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e92936e190213f39dd596014f1730d02 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_cd79d363935b2288576957b6663bca88 = $(`<div id="html_cd79d363935b2288576957b6663bca88" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #165</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.3206 km²<br>             <b>Mean Intensity Change:</b> 2.73 dB<br>             <b>Peak Intensity Spike:</b> +3.17 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.6047°N, 75.9761°E         </div>         </div>`)[0];
+                popup_e92936e190213f39dd596014f1730d02.setContent(html_cd79d363935b2288576957b6663bca88);
+            
+        
+
+        marker_5838a9cd85121bf6477d6cd54a4e4466.bindPopup(popup_e92936e190213f39dd596014f1730d02)
+        ;
+
+        
+    
+    
+                marker_5838a9cd85121bf6477d6cd54a4e4466.setIcon(icon_b7622da54f72747abd778410cfd87855);
+            
+    
+            var marker_eef906c9c11968887e47b8dd2991639a = L.marker(
+                [11.667153358459473, 75.94917297363281],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_d170205b9c1f5fd367b33927d4f35e30 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_01a032341818c9744837967cd38fc5f3 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_e21984d3b4ce0d77cbe15c5f39de0401 = $(`<div id="html_e21984d3b4ce0d77cbe15c5f39de0401" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #91</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.6011 km²<br>             <b>Mean Intensity Change:</b> 2.77 dB<br>             <b>Peak Intensity Spike:</b> +3.17 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.6672°N, 75.9492°E         </div>         </div>`)[0];
+                popup_01a032341818c9744837967cd38fc5f3.setContent(html_e21984d3b4ce0d77cbe15c5f39de0401);
+            
+        
+
+        marker_eef906c9c11968887e47b8dd2991639a.bindPopup(popup_01a032341818c9744837967cd38fc5f3)
+        ;
+
+        
+    
+    
+                marker_eef906c9c11968887e47b8dd2991639a.setIcon(icon_d170205b9c1f5fd367b33927d4f35e30);
+            
+    
+            var marker_d7f1a7b4156b883b2a5a358a1b675f18 = L.marker(
+                [11.404651641845703, 75.93464660644531],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_41dcf74896a9a7b19ad6e6f8a7cb8366 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_40b7f2558bf0e6ef188d8a14fc998f4c = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_fb0638edc80670a6918e6fa74a0e753d = $(`<div id="html_fb0638edc80670a6918e6fa74a0e753d" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #357</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.4007 km²<br>             <b>Mean Intensity Change:</b> 2.56 dB<br>             <b>Peak Intensity Spike:</b> +3.13 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.4047°N, 75.9346°E         </div>         </div>`)[0];
+                popup_40b7f2558bf0e6ef188d8a14fc998f4c.setContent(html_fb0638edc80670a6918e6fa74a0e753d);
+            
+        
+
+        marker_d7f1a7b4156b883b2a5a358a1b675f18.bindPopup(popup_40b7f2558bf0e6ef188d8a14fc998f4c)
+        ;
+
+        
+    
+    
+                marker_d7f1a7b4156b883b2a5a358a1b675f18.setIcon(icon_41dcf74896a9a7b19ad6e6f8a7cb8366);
+            
+    
+            var marker_5ceb7cac0bed47b12ad25356c45ef399 = L.marker(
+                [11.563084602355957, 75.96991729736328],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_f31904045584e9dc3d2af1cd7f9cefb3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8cef238573c55173e89406b955659876 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_d2e1d4008faa7eb062d1292cd04c1ef6 = $(`<div id="html_d2e1d4008faa7eb062d1292cd04c1ef6" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #198</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.2004 km²<br>             <b>Mean Intensity Change:</b> 2.72 dB<br>             <b>Peak Intensity Spike:</b> +3.12 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.5631°N, 75.9699°E         </div>         </div>`)[0];
+                popup_8cef238573c55173e89406b955659876.setContent(html_d2e1d4008faa7eb062d1292cd04c1ef6);
+            
+        
+
+        marker_5ceb7cac0bed47b12ad25356c45ef399.bindPopup(popup_8cef238573c55173e89406b955659876)
+        ;
+
+        
+    
+    
+                marker_5ceb7cac0bed47b12ad25356c45ef399.setIcon(icon_f31904045584e9dc3d2af1cd7f9cefb3);
+            
+    
+            var marker_320356a216175f25736324a242f8aa7d = L.marker(
+                [11.745631217956543, 76.01970672607422],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_5b204f776feca350474429cab21d546d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ba877035ba123f3c30d2c9ba0bc8d448 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_eb998d29fe514ed32795464b29304dcd = $(`<div id="html_eb998d29fe514ed32795464b29304dcd" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #20</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.2004 km²<br>             <b>Mean Intensity Change:</b> 2.62 dB<br>             <b>Peak Intensity Spike:</b> +3.10 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.7456°N, 76.0197°E         </div>         </div>`)[0];
+                popup_ba877035ba123f3c30d2c9ba0bc8d448.setContent(html_eb998d29fe514ed32795464b29304dcd);
+            
+        
+
+        marker_320356a216175f25736324a242f8aa7d.bindPopup(popup_ba877035ba123f3c30d2c9ba0bc8d448)
+        ;
+
+        
+    
+    
+                marker_320356a216175f25736324a242f8aa7d.setIcon(icon_5b204f776feca350474429cab21d546d);
+            
+    
+            var marker_73aff98390cc0890ab95a9db62d1c2ff = L.marker(
+                [11.455852508544922, 75.95539093017578],
+                {
+}
+            ).addTo(map_3f21be170726a508f8f264b7ce11aeaa);
+        
+    
+            var icon_e8ee6f605cfc47f34f58f91b79e7f6ad = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "crosshairs",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_736d338d55f02536ec000cdaac521c15 = L.popup({
+  "maxWidth": 320,
+});
+
+        
+            
+                var html_1efce02252121e5b4c1fcfeea6f9b94d = $(`<div id="html_1efce02252121e5b4c1fcfeea6f9b94d" style="width: 100.0%; height: 100.0%;">         <div style='font-family: Arial, sans-serif; width: 260px; font-size:12px; line-height:1.4;'>             <h4 style='margin:0 0 5px 0; color:#c9302c;'>Surface-Change Zone #317</h4>             <hr style='margin:4px 0; border:0; border-top:1px solid #ccc;'>             <b>Coverage Area Extent:</b> 0.7614 km²<br>             <b>Mean Intensity Change:</b> 2.65 dB<br>             <b>Peak Intensity Spike:</b> +3.09 dB<br>             <b>Temporal Trajectory Profile:</b> <span style='color:#c9302c;'>TRANSITIONAL</span><br>             <b>Dynamic Signal Trend:</b> BACKSCATTER INCREASE<br>             <b>Duration Classification:</b> Fluctuating Backscatter Signal<br>             <b>Centroid Coordinates:</b> 11.4559°N, 75.9554°E         </div>         </div>`)[0];
+                popup_736d338d55f02536ec000cdaac521c15.setContent(html_1efce02252121e5b4c1fcfeea6f9b94d);
+            
+        
+
+        marker_73aff98390cc0890ab95a9db62d1c2ff.bindPopup(popup_736d338d55f02536ec000cdaac521c15)
+        ;
+
+        
+    
+    
+                marker_73aff98390cc0890ab95a9db62d1c2ff.setIcon(icon_e8ee6f605cfc47f34f58f91b79e7f6ad);
+            
+    
+            map_3f21be170726a508f8f264b7ce11aeaa.fitBounds(
+                [[11.038501739501953, 75.89522552490234], [10.765379905700684, 75.98651123046875], [10.698334693908691, 75.99481201171875], [10.578646659851074, 76.09854888916016], [10.551523208618164, 76.10684967041016], [10.573859214782715, 76.10684967041016], [10.78134536743164, 75.97199249267578], [10.735048294067383, 75.98443603515625], [11.10082721710205, 75.87448120117188], [10.719084739685059, 76.05912780761719], [10.79411792755127, 75.97406768798828], [10.56109619140625, 76.10062408447266], [11.008143424987793, 75.89937591552734], [11.067266464233398, 75.91390228271484], [10.741433143615723, 75.97821807861328], [11.11681079864502, 75.86410522460938], [10.741433143615723, 75.99066162109375], [11.52626895904541, 75.99688720703125], [11.582294464111328, 75.97821807861328], [11.662349700927734, 75.92219543457031], [11.740825653076172, 75.92219543457031], [11.441451072692871, 75.94087219238281], [11.643134117126465, 76.00103759765625], [11.142385482788086, 75.85995483398438], [11.604707717895508, 75.97614288330078], [11.667153358459473, 75.94917297363281], [11.404651641845703, 75.93464660644531], [11.563084602355957, 75.96991729736328], [11.745631217956543, 76.01970672607422], [11.455852508544922, 75.95539093017578]],
+                {}
+            );
+        
+</script>
+</html>
