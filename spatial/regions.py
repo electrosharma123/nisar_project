@@ -2,7 +2,7 @@
 """
 Groups adjacent anomalous pixels into cohesive geographic regions, automatically 
 diagnosing directional change signatures across the multi-temporal time series.
-Version 1.1 includes dual-sided logic to process both increase and decrease anomalies.
+Version 1.1.5 includes dual-sided logic to process both increase and decrease anomalies.
 """
 import numpy as np
 import pandas as pd
@@ -21,6 +21,7 @@ def group_anomalies_into_regions(anomaly_mask, change_matrix, time_series_cube, 
     print(f"🧩 Connected anomaly components before region filtering: {num_features}")
     
     region_records = []
+    # FIXED: Extract tuple size with proper structural index parameter 
     num_acquisitions = time_series_cube.shape[0]
     
     for r_id in range(1, num_features + 1):

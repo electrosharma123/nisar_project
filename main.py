@@ -1,8 +1,8 @@
 # main.py
 """
-Central Orchestration Engine for Version 1.1.0 Production Release.
-Executes multi-temporal NISAR radar-backscatter change detection using a virtual-sensor framework.
-Supports dual-sided anomaly tracking (both backscatter increase and decrease).
+Central Orchestration Engine for Version 1.1.5 Production Release.
+Executes multi-temporal NISAR radar-backscatter change detection with integrated 
+open-access Sentinel-2 STAC optical cross-validation.
 """
 import os
 import numpy as np
@@ -14,6 +14,7 @@ from processing.validation import validate_dataset_compatibility
 from processing.preprocessing import construct_authoritative_quality_mask, convert_linear_power_to_db
 from processing.temporal import build_time_series_cube, analyze_vector_virtual_sensor_trends
 from processing.anomaly import isolate_statistical_anomalies
+from processing.optical_validation import cross_validate_regions_with_sentinel
 from spatial.regions import group_anomalies_into_regions
 from spatial.geospatial import export_matrix_to_geotiff
 from visualization.plots import generate_static_scientific_plots
@@ -111,6 +112,11 @@ def orchestrate_pipeline():
     )
     
     # =====================================================================
+    # PHASE 5.5: SENTINEL-2 OPTICAL CROSS-VALIDATION LAYER
+    # =====================================================================
+    df_regions = cross_validate_regions_with_sentinel(df_regions, CONFIG)
+    
+    # =====================================================================
     # PHASE 6: GEOGRAPHICALLY SEPARATED LAYER EXPORTS
     # =====================================================================
     print("\n💾 Commencing georeferenced asset generation routine...")
@@ -132,7 +138,9 @@ def orchestrate_pipeline():
     
     print("\n📌 PIPELINE TERMINAL REGION SUMMARY PROFILE:")
     if not df_regions.empty:
-        print(df_regions.to_string(index=False))
+        # Adjusted column subset view to accommodate the new validation attributes
+        columns_to_show = ["region_id", "area_km2", "centroid_lat", "centroid_lon", "mean_change_db", "max_change_db", "change_direction", "cross_validation_status"]
+        print(df_regions[columns_to_show].to_string(index=False))
     else:
         print("⚠️ No valid structural anomaly targets cross the specified dynamic criteria limits.")
         

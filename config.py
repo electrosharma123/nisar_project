@@ -2,8 +2,7 @@
 """
 Authoritative Single Point of Truth (SPOT) Configuration Registry.
 Contains all system hyperparameters, data paths, and scientific limits.
-Version 1.1 introduces dual-sided tracking configurations to monitor both 
-extreme backscatter gains and severe attenuation drops simultaneously.
+Version 1.1.5 introduces open-access Sentinel-2 STAC optical cross-validation parameters.
 """
 
 CONFIG = {
@@ -37,6 +36,13 @@ CONFIG = {
     # Data Quality Control Filtering Constraints
     "max_allowed_water_fraction": 0.05,
     
+    # Phase 7: Sentinel-2 Multi-Spectral STAC Cross-Validation Settings
+    "run_optical_validation": True,
+    "stac_api_url": "https://microsoft.com",
+    "stac_backup_url": "https://element84.com",  # FIXED: Open failover route
+    "sentinel_max_cloud_cover_percent": 25.0,
+    "ndvi_anomaly_threshold": -0.25,          # Magnitude of NDVI drop to confirm canopy stripping
+    
     # Geospatial Output Parameters
     "nodata_value": -9999.0,
     "output_crs": "EPSG:6933",
@@ -44,5 +50,5 @@ CONFIG = {
     # Pipeline Output Management
     "generate_interactive_map": True,
     "output_root": "outputs",
-    "software_version": "1.1.0"
+    "software_version": "1.1.5"
 }
