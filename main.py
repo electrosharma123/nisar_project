@@ -1,9 +1,11 @@
 # main.py
 """
-Central Orchestration Engine for Version 1.0.0 Production Release.
+Central Orchestration Engine for Version 1.1.0 Production Release.
 Executes multi-temporal NISAR radar-backscatter change detection using a virtual-sensor framework.
+Supports dual-sided anomaly tracking (both backscatter increase and decrease).
 """
 import os
+import numpy as np
 from scipy.ndimage import binary_erosion
 
 from config import CONFIG
@@ -87,19 +89,18 @@ def orchestrate_pipeline():
     print(f"\n🔍 Border processing metric resolution: {abs(pixel_spacing):.2f} meters per pixel.")
     print(f"🔍 Applying adaptive boundary cleaning erosion layer ({calculated_iterations} iterations)...")
     
-    # SCIENTIFIC CORRECTOR: Mask filters explicitly check finite ranges across both NaN and inf limits
-    import numpy as np
     valid_data_mask = np.isfinite(backscatter_change_db)
     clean_domain_mask = binary_erosion(valid_data_mask, iterations=calculated_iterations)
     
-    # Extract anomalies based on dynamic variance distributions
+    # Extract anomalies based on dynamic variance distributions (Updated for V1.1 Dual-Sided CONFIG)
     anomaly_mask, stats = isolate_statistical_anomalies(
-        backscatter_change_db, clean_domain_mask,
-        CONFIG["anomaly_percentile"], CONFIG["max_outlier_suppression_db"]
+        backscatter_change_db, clean_domain_mask, CONFIG
     )
     
-    print(f"📈 Threshold Cutoff Locked: {stats['cutoff_applied']:.3f} dB ({CONFIG['anomaly_percentile']}th Percentile)")
-    print(f"   • Baseline background data distribution median: {stats['median']:.3f} dB")
+    print(f"📈 Threshold Cutoffs Locked:")
+    print(f"   • High Tail Cutoff (Gain):  +{stats['cutoff_high']:.3f} dB")
+    print(f"   • Low Tail Cutoff (Drop)  :  {stats['cutoff_low']:.3f} dB")
+    print(f"   • Baseline background distribution median: {stats['median']:.3f} dB")
     
     # =====================================================================
     # PHASE 5: SPATIAL CANDIDATE TARGET EXTRACTION
